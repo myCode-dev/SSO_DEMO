@@ -5,7 +5,7 @@
 
 首先，將專案克隆到本地。開啟終端並執行以下命令：
 ```bash
-git clone https://github.com/your_username/project.git
+git clone https://github.com/Celia-code/SSO_DEMO.git
 ```
 進入專案目錄：
 ```bash
