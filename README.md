@@ -14,7 +14,7 @@ cd project
 ## 2. 設置環境變數
 專案使用 .env 檔案來設置環境變數。首先，複製示例環境變數文件 example.env 並命名為 .env：
 ```bash
-cp example.env .env
+copy example.env .env
 ```
 打開 .env 文件，根據你的實際情況修改其中的環境變數值。
 
