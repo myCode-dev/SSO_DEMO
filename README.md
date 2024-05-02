@@ -26,6 +26,12 @@ cd project
 copy example.env .env
 ```
 打開 .env 文件，修改其中的環境變數。
+- CLIENT_ID:NCU Portal提供的Client ID
+- CLIENT_SECRET:NCU Portal提供的Client Secret
+- CALLBACK_URL: 重定向的網頁連結
+- AUTHORIZATION_URL: OAuth單一簽入入口 (https://portal.ncu.edu.tw/oauth2/authorization)
+- TOKEN_URL: OAuth 取得 Access Token 入口 (https://portal.ncu.edu.tw/oauth2/token)
+- USER_INFO_URL: 使用者資訊入口 (https://portal.ncu.edu.tw/apis/oauth/v1/info)
 
 ### 3. 安裝依賴
 ```bash
