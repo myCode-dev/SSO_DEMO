@@ -9,7 +9,7 @@ $(function() {
     sidebar = document.querySelector(".sidebar"),
     toggle = document.querySelector(".toggle"),
     modeSwitch = document.querySelector(".toggle-switch"),
-    modeText = document.querySelector(".mode-text"),
+    modeText = document.querySelector(".mode-text")
     searchBtn = document.querySelector(".search-bar");
   
     modeSwitch.addEventListener("click", () => {
@@ -103,25 +103,27 @@ $(function() {
         group: "tasksGroup",
         moveItemOnDrop: true
     });
-}
+    }
 
-function renderCard($container, task) {
-    var $item = $("<div>")
-        .addClass("card")
-        .addClass("dx-card")
-        .addClass("dx-theme-text-color")
-        .addClass("dx-theme-background-color")
-        .appendTo($container);
+    function renderCard($container, task) {
+        var $item = $("<div>")
+            .addClass("card")
+            .addClass("dx-card")
+            .addClass("dx-theme-text-color")
+            .addClass("dx-theme-background-color")
+            .appendTo($container);
 
-    var employee = employees.filter(function(employee) { return employee.ID === task.Task_Assigned_Employee_ID })[0];
+        var employee = employees.filter(function(employee) { return employee.ID === task.Task_Assigned_Employee_ID })[0];
 
-    $("<div>").addClass("card-priority").addClass("priority-" + task.Task_Priority).appendTo($item);
-    $("<div>").addClass("card-subject").text(task.Task_Subject).appendTo($item);
-    $("<div>").addClass("card-assignee").text(employee.Name).appendTo($item);
-}
+        $("<div>").addClass("card-priority").addClass("priority-" + task.Task_Priority).appendTo($item);
+        $("<div>").addClass("card-subject").text(task.Task_Subject).appendTo($item);
+        $("<div>").addClass("card-assignee").text(employee.Name).appendTo($item);
+    }
+
+
 });
 
-var tasks = [{
+let tasks = [{
 "Task_ID": 1,
 "Task_Assigned_Employee_ID": 1,
 "Task_Owner_ID": 1,
@@ -2116,7 +2118,7 @@ var tasks = [{
 // }
 ];
 
-var employees = [{
+let employees = [{
 "ID": 1,
 "Name": "承澤"
 }, {
@@ -2270,3 +2272,5 @@ var employees = [{
 "ID": 51,
 "Name": "Stu Pizaro"
 }];
+
+
