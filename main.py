@@ -10,6 +10,7 @@ import http.cookies
 # 加载dotenv文件
 load_dotenv()
 
+# Flask 配置
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
