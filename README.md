@@ -1,45 +1,77 @@
-# NCU PORTAL OAuth 2.0串接範例
-這個範例程式展示了如何在Python Flask應用程式中串接NCU PORTAL的OAuth 2.0授權機制，並獲取使用者資訊。
+### **NCU PORTAL OAuth 2.0 Integration Example**
 
-## 使用技術
-Python
-Flask框架
+This example demonstrates how to integrate **NCU PORTAL's OAuth 2.0 authorization mechanism** into a Python Flask application to retrieve user information.
 
-## 串接文件
-文件: https://github.com/ncucc/portal4g-doc
+---
 
-## 操作說明
+## **🛠 Technologies Used**
+- **Backend Framework:** Python Flask
 
-### 1. Clone專案到本地
+---
 
-首先，將專案克隆到本地。開啟終端並執行以下命令：
+## **📖 Integration Documentation**
+Official documentation: [NCU Portal OAuth Docs](https://github.com/ncucc/portal4g-doc)
+
+---
+
+## **🚀 Setup & Instructions**
+
+### **1️⃣ Clone the Project**
+First, clone the project to your local machine. Open the terminal and run:
+
 ```bash
 git clone https://github.com/Celia-code/SSO_DEMO.git
 ```
-進入專案目錄：
+
+Navigate into the project directory:
+
 ```bash
 cd project
 ```
-### 2. 設置環境變數
-專案使用 .env 檔案來設置環境變數。首先，複製示例環境變數文件 example.env 並命名為 .env：
+
+---
+
+### **2️⃣ Set Environment Variables**
+This project uses a `.env` file to configure environment variables.  
+First, copy the example environment file and rename it to `.env`:
+
+#### **Windows:**
 ```bash
 copy example.env .env
 ```
-打開 .env 文件，修改其中的環境變數。
-- CLIENT_ID:NCU Portal提供的Client ID
-- CLIENT_SECRET:NCU Portal提供的Client Secret
-- CALLBACK_URL: 重定向的網頁連結
-- AUTHORIZATION_URL: OAuth單一簽入入口 (https://portal.ncu.edu.tw/oauth2/authorization)
-- TOKEN_URL: OAuth 取得 Access Token 入口 (https://portal.ncu.edu.tw/oauth2/token)
-- USER_INFO_URL: 使用者資訊入口 (https://portal.ncu.edu.tw/apis/oauth/v1/info)
 
-### 3. 安裝依賴
+#### **Linux/Mac:**
+```bash
+cp example.env .env
+```
+
+Then, open the `.env` file and modify the following variables:
+
+| Variable           | Description                                       |
+|--------------------|---------------------------------------------------|
+| `CLIENT_ID`       | Client ID provided by NCU Portal                   |
+| `CLIENT_SECRET`   | Client Secret provided by NCU Portal               |
+| `CALLBACK_URL`    | Redirect URL for the application                   |
+| `AUTHORIZATION_URL` | OAuth 2.0 authorization endpoint (`https://portal.ncu.edu.tw/oauth2/authorization`) |
+| `TOKEN_URL`       | OAuth 2.0 token retrieval endpoint (`https://portal.ncu.edu.tw/oauth2/token`) |
+| `USER_INFO_URL`   | User information retrieval endpoint (`https://portal.ncu.edu.tw/apis/oauth/v1/info`) |
+
+---
+
+### **3️⃣ Install Dependencies**
+Install the required dependencies using:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. 執行專案
+---
+
+### **4️⃣ Run the Project**
+Start the Flask application with:
+
 ```bash
 python main.py
 ```
 
+---
